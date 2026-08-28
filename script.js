@@ -1,5 +1,5 @@
 (function () {
-  var WHATSAPP_NUMBER = "2347010202018";
+  var WHATSAPP_NUMBER = "2349066600444";
   var whatsappUrl = "https://wa.me/" + WHATSAPP_NUMBER;
   var whatsappMessage = "Hey ZERD, I'd like to start a build.";
 
