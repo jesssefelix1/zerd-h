@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZERD — Drive Differently</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="tread-bar" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">ZERD<span class="logo-dot">•</span></a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#process">Process</a>
+      <a href="#builds">Builds</a>
+      <a href="#build-sheet">Start a Build</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-ghost header-cta" href="#build-sheet">Open a work order</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">CUSTOM APPAREL, BUILT FROM YOUR CAR</p>
+      <h1 class="hero-title">SNAP YOUR CAR.<br>WEAR YOUR CAR.</h1>
+      <p class="hero-sub">Send a photo of your ride. Our artists trace it into a one-of-one shirt design , badges, stance and all. No templates, no clip-art cars.</p>
+      <div class="hero-actions">
+        <a href="#build-sheet" class="btn btn-primary">Start a build</a>
+        <a href="#" class="btn btn-outline" id="wa-hero-link" target="_blank" rel="noopener">DM us on WhatsApp</a>
+      </div>
+    </div>
+    <svg class="hero-road" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="0" y1="60" x2="1200" y2="60" stroke="var(--paper)" stroke-width="4" stroke-dasharray="40 28"/>
+    </svg>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="process">
+    <div class="wrap">
+      <p class="section-eyebrow">HOW A BUILD GOES DOWN</p>
+      <h2 class="section-title">Work Order</h2>
+      <ol class="process-list">
+        <li class="process-step">
+          <span class="step-no">01</span>
+          <h3>Send the photo</h3>
+          <p>One clear shot of your car — front three-quarter works best. DM it to us or drop it in the build sheet below.</p>
+        </li>
+        <li class="process-step">
+          <span class="step-no">02</span>
+          <h3>We sketch the build</h3>
+          <p>An artist hand-traces your car's actual lines, wheels and stance into a print-ready line design. Not a stock silhouette.</p>
+        </li>
+        <li class="process-step">
+          <span class="step-no">03</span>
+          <h3>You approve the proof</h3>
+          <p>We send a mockup on the shirt before anything gets printed. Tweak placement, colorway or text — your call.</p>
+        </li>
+        <li class="process-step">
+          <span class="step-no">04</span>
+          <h3>It ships</h3>
+          <p>Printed, checked, boxed. You get tracking the moment it leaves the shop.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FEATURED BUILDS -->
+  <section id="builds" class="builds">
+    <div class="wrap">
+      <p class="section-eyebrow">RECENT WORK ORDERS</p>
+      <h2 class="section-title">A Few Builds</h2>
+      <div class="build-grid">
+
+        <article class="build-card">
+          <div class="build-art" data-art="coupe"></div>
+          <div class="build-meta">
+            <span class="tag">ORDER NO. 0114</span>
+            <h3>Mercedes 190 Evo II</h3>
+            <p>Front three-quarter line art, tee &amp; hoodie run.</p>
+          </div>
+        </article>
+
+        <article class="build-card">
+          <div class="build-art" data-art="truck"></div>
+          <div class="build-meta">
+            <span class="tag">ORDER NO. 0098</span>
+            <h3>Dodge RAM</h3>
+            <p>Full-back print with plate detail and mud terrain tread.</p>
+          </div>
+        </article>
+
+        <article class="build-card">
+          <div class="build-art" data-art="classic"></div>
+          <div class="build-meta">
+            <span class="tag">ORDER NO. 0071</span>
+            <h3>BMW M4</h3>
+            <p>Chest-pocket sized build, single-line minimalist trace.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILD SHEET (signature interactive element) -->
+  <section id="build-sheet" class="build-sheet-section">
+    <div class="wrap build-sheet-wrap">
+      <div class="build-sheet-intro">
+        <p class="section-eyebrow">START HERE</p>
+        <h2 class="section-title">Fill Out The Sheet</h2>
+        <p>Tell us about the car. We'll generate your order number and open WhatsApp with your build sheet ready to send — attach the photo there and you're queued.</p>
+        <form id="build-form" class="build-form" novalidate>
+          <div class="field">
+            <label for="f-make">Make</label>
+            <input type="text" id="f-make" name="make" placeholder="e.g. Toyota" required>
+          </div>
+          <div class="field">
+            <label for="f-model">Model</label>
+            <input type="text" id="f-model" name="model" placeholder="e.g. Hilux" required>
+          </div>
+          <div class="field">
+            <label for="f-year">Year</label>
+            <input type="text" id="f-year" name="year" placeholder="e.g. 2019" required inputmode="numeric">
+          </div>
+          <div class="field">
+            <label for="f-garment">Garment</label>
+            <select id="f-garment" name="garment">
+              <option value="TEE">Tee</option>
+              <option value="HOODIE">Hoodie</option>
+              <option value="CREWNECK">Crewneck</option>
+            </select>
+          </div>
+          <div class="field field-wide">
+            <label for="f-notes">Notes (colorway, plate text, placement)</label>
+            <textarea id="f-notes" name="notes" rows="3" placeholder="Optional"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Generate build sheet</button>
+        </form>
+      </div>
+
+      <div class="ticket" id="ticket" aria-live="polite">
+        <div class="ticket-top">
+          <span class="ticket-label">ZERD WORK ORDER</span>
+          <span class="ticket-no" id="t-orderno">NO. ——</span>
+        </div>
+        <div class="ticket-row"><span>MAKE</span><strong id="t-make">—</strong></div>
+        <div class="ticket-row"><span>MODEL</span><strong id="t-model">—</strong></div>
+        <div class="ticket-row"><span>YEAR</span><strong id="t-year">—</strong></div>
+        <div class="ticket-row"><span>GARMENT</span><strong id="t-garment">TEE</strong></div>
+        <div class="ticket-row ticket-notes"><span>NOTES</span><strong id="t-notes">—</strong></div>
+        <div class="ticket-status" id="t-status">AWAITING PHOTO</div>
+        <a href="#" class="btn btn-outline ticket-cta" id="wa-ticket-link" target="_blank" rel="noopener">Send to WhatsApp →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap contact-inner">
+      <h2 class="section-title">Every build starts as a DM.</h2>
+      <p>No storefront, no catalog to pick from -just your car, on your chest. Send the photo and let's open a work order.</p>
+      <a href="#" class="btn btn-primary" id="wa-contact-link" target="_blank" rel="noopener">Message ZERD on WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>ZERD — Drive Differently.</span>
+    <span id="footer-year"></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
